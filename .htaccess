@@ -1,0 +1,13 @@
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^admin/?(.*)?$ /backend/web/$1 [L]
+  RewriteRule ^statics/?(.*)?$ /statics/web/$1 [L]
+  RewriteRule ^([^/].*)?$ /frontend/web/$1 [L]
+</IfModule>

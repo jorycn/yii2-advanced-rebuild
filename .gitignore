@@ -1,0 +1,7 @@
+/yii
+/composer.lock
+/composer.phar
+
+.directory
+/.idea
+/nbproject
