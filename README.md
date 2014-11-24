@@ -1,31 +1,15 @@
-Yii 2 light cms
+Yii2 Blog
 ===================================
 
-Developed for learning skills yii2.
-Сan use in any projects!
+Yii2 Blog是基于jroy_yii2_advanced开发的blog演示站。
 
-Yii 2 Advanced Application Template
+
+安装
 ===================================
 
-[Yii 2 Advanced Application Template](https://github.com/yiisoft/yii2/tree/master/apps/advanced) is a skeleton Yii 2 application best for
-developing complex Web applications with multiple tiers.
+1. $ git clone https://github.com/jroy007/jroy_yii2_advanced.git -b yii2-blog
+2. composer install
+3. php yii init
+4. php yii migrate
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
-
-INSTALLATION
-===================================
-
-[Yii 2 Advanced Application Template](https://github.com/yiisoft/yii2/tree/master/apps/advanced)
-
-1. `$ git clone https://github.com/mrbighokage/yii2-demo`
-2. check uncomment php.ini `extension=phar.so`
-3. `$ cd ../yii2-demo` 
-4. [Download Composer](https://getcomposer.org/download/) `$ curl -sS https://getcomposer.org/installer | php`
-5. installation [yii2 framework](https://github.com/yiisoft/yii2) `$ php composer.phar update`
-6. initial local config `$ php init`
-7. create empty database 'yii2-demo' and set db config ../yii2-light-cms/common/config/main-local.php
-8. apply database migrate `$ php yii migrate`
-Use frontend: http://www.yii2-demo and backend http://www.yii2-demo/admin 
-
-Login: admin; Pass: qwe1234
+初始化后台：login:admin passwd:admin88
