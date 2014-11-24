@@ -14,11 +14,7 @@ use kartik\icons\Icon;
             </div>
             <div class="panel-body">
                 <?php
-                $form = ActiveForm::begin([
-                    'enableClientValidation' => true,
-                    'enableAjaxValidation' => true,
-                    'validateOnChange' => false
-                ]);
+                $form = ActiveForm::begin();
 
                 echo $form->field($model, 'name')->textInput($model->isNewRecord ? [] : ['disabled' => 'disabled']) .
                     $form->field($model, 'description')->textarea(['style' => 'height: 100px']) .

@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use kartik\grid\GridView;
 use kartik\icons\Icon;
 
@@ -41,13 +42,13 @@ $this->params['breadcrumbs'][] = $this->title;
                             $link = '#';
                             switch ($action) {
                                 case 'view':
-                                    $link = 'permissions/view?name=' . $model->name;
+                                    $link = Url::to(['permissions/view', 'name'=>$model->name]);
                                     break;
                                 case 'update':
-                                    $link = 'permissions/update?name=' . $model->name;
+                                    $link = Url::to(['permissions/update', 'name'=>$model->name]);
                                     break;
                                 case 'delete':
-                                    $link = 'permissions/delete?name=' . $model->name;
+                                    $link = Url::to(['permissions/delete', 'name'=>$model->name]);;
                                     break;
                             }
                             return $link;

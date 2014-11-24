@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use kartik\icons\Icon;
 use kartik\detail\DetailView;
 
@@ -8,7 +9,7 @@ $this->title = Yii::t('auth', 'Permission \'{name}\'', ['name' => $model->name])
 $this->params['breadcrumbs'] = [
     [
         'label' => Yii::t('auth', 'Permissions'),
-        'url' => 'permissions'
+        'url' => Url::toRoute('/permissions')
     ],
     $model->name
 ];

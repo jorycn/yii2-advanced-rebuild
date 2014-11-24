@@ -4,6 +4,7 @@ namespace backend\components;
 
 use Yii;
 use yii\filters\AccessControl;
+use yii\web\ForbiddenHttpException;
 
 /**
  * Main controller for backend app
@@ -25,6 +26,7 @@ class Controller extends \yii\web\Controller
 		}
 		return true;
 	}*/
+
 	/**
 	 * @inheritdoc
 	 */
@@ -42,4 +44,15 @@ class Controller extends \yii\web\Controller
 			]
 		];
 	}
+
+	/*public function beforeAction($action)
+    {
+        if(Yii::$app->user->id == 1 || Yii::$app->user->isGuest) return true;
+        $action = Yii::$app->controller->id;
+        if(Yii::$app->user->can($action)){
+            return true;
+        }else{
+            throw new ForbiddenHttpException('对不起，您现在还没获此操作的权限');
+        }
+    }*/
 }

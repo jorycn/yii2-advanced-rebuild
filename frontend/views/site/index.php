@@ -1,5 +1,28 @@
 <?php
 /**
+ * 　　　　　　　　┏┓　　　┏┓
+ * 　　　　　　　┏┛┻━━━┛┻┓
+ * 　　　　　　　┃　　　　　　　┃ 　
+ * 　　　　　　　┃　　　━　　　┃
+ * 　　　　　　　┃　＞　　　＜　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┃...　⌒　...　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┗━┓　　　┏━┛
+ * 　　　　　　　　　┃　　　┃　Code is far away from bug with the animal protecting　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃   神兽保佑,代码无bug
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃  　　　　　　
+ * 　　　　　　　　　┃　　　┃
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┗━━━┓
+ * 　　　　　　　　　┃　　　　　　　┣┓
+ * 　　　　　　　　　┃　　　　　　　┏┛
+ * 　　　　　　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　　　　　　┃┫┫　┃┫┫
+ * 　　　　　　　　　　┗┻┛　┗┻┛
+ */
+/**
  * @var yii\web\View $this
  */
 $this->title = 'My Yii Application';

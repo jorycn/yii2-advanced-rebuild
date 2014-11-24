@@ -57,7 +57,7 @@ class LoginForm extends Model
             if($user && (new DbManager())->getAssignment('admin', $user->getId())) {
                 return Yii::$app->user->login($user);
             }
-            $this->addError('password', 'Incorrect username or password.');
+            $this->addError('username', 'Permission Denied!');
         }
         return false;
     }

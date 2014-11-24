@@ -8,11 +8,7 @@ use kartik\icons\Icon;
 
 <div class="row">
     <?php
-    $form = ActiveForm::begin([
-        'enableClientValidation' => true,
-        'enableAjaxValidation' => true,
-        'validateOnChange' => false
-    ]);
+    $form = ActiveForm::begin();
     ?>
     <div class="col-lg-6">
         <div class="panel panel-default">

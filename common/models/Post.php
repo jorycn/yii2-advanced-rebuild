@@ -3,6 +3,7 @@ namespace common\models;
 
 use yii;
 use yii\db\ActiveRecord;
+use common\extensions\helpers\Str;
 use common\extensions\fileapi\behaviors\UploadBehavior;
 
 class Post extends ActiveRecord
@@ -34,7 +35,7 @@ class Post extends ActiveRecord
         return [
             ['slug', 'filter', 'filter' => 'trim', 'on' => ['admin-edit-page-static']],
             ['slug', 'required', 'on' => ['admin-edit-page-static']],
-            ['slug', 'match', 'pattern' => '/^[a-z0-9_-]+$/', 'on' => ['admin-edit-page-static']],
+            ['slug', 'match', 'pattern' => '/^[a-z0-9- ]+$/', 'on' => ['admin-edit-page-static']],
             ['slug', 'string', 'min' => 3, 'max' => 64, 'on' => ['admin-edit-page-static']],
             ['slug', 'unique', 'on' => ['admin-edit-page-static']],
 
@@ -135,6 +136,7 @@ class Post extends ActiveRecord
                 }
             }
 
+            $this->slug = Str::slug($this->slug);
             if (!$this->published_date) {
                 $this->published_date = date('Y-m-d', time());
             }

@@ -88,8 +88,7 @@ class User extends ActiveRecord implements IdentityInterface
             // Name and Surname  [[name]] & [[nickname]]
             [['nickname'], 'required', 'on' => ['admin-update', 'admin-create']],
             [['nickname'], 'string', 'max' => 50, 'on' => ['admin-update', 'admin-create']],
-            ['nickname', 'match', 'pattern' => '/^[a-zA-Z0-9_-]+$/', 'on' => ['admin-update', 'admin-create']],
-
+            
             // User role [[role_id]]
 /*            ['role_id', 'default', 'value' => self::ROLE_USER, 'on' => ['admin-update', 'admin-create']],*/
             ['role', 'in', 'range' => array_keys(self::getRoleArray()), 'on' => ['admin-update', 'admin-create']],
@@ -274,7 +273,7 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function generatePasswordResetToken()
     {
-        $this->password_reset_token = Yii::$app->getSecurity()->generateRandomKey() . '_' . time();
+        $this->password_reset_token = Yii::$app->getSecurity()->generateRandomString() . '_' . time();
     }
 
     public function removePasswordResetToken()

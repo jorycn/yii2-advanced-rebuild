@@ -18,7 +18,6 @@ use common\extensions\fileapi\actions\DeleteAction;
 
 class PostsController extends Controller
 {
-
     public function actions()
     {
         $post = new Post();
